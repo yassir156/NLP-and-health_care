@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{% static 'css/upload.css' %}">
+  <script src="{% static 'js/index.js' %}"></script>
+  <script src="https://kit.fontawesome.com/fd87d8fefa.js" crossorigin="anonymous"></script>
+  <title>Upload File</title>
+</head>
+
+<body>
+  <header>
+    <nav class="containers">
+      <div class="Wrapper">
+        <div class="logo">
+          <a href="" class="logo_img"><img src="../static/images/logo (2).png" alt="logo"></a>
+        </div>
+        <ul class="navigation">
+          <a href="">
+            <li>Home</li>
+          </a>
+          <a href="">
+            <li>About</li>
+          </a>
+          <a href="">
+            <li>Contact</li>
+          </a>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="main">
+    <div class="upload"><i class="fa-solid fa-cloud-arrow-up" id="icon" ></i></div>
+    <h1 style="font-size: 60px;margin-top: 1%;" >Upload Your files</h1>
+    <form id="my-form" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <label for="file">Click here to start uploading:</label>
+      <input type="file" name="file" id="file" multiple>
+      <br>
+      <button type="submit" class="btn" id="show-btn">Upload</button>
+  </form>
+  
+  <a href="/search"><button id="hidden-btn" style="display: none;"  class="btnnext">Next</button></a>
+  </div>
+  
+
+</body>
+<script>
+const showBtn = document.getElementById("show-btn");
+const hiddenBtn = document.getElementById("hidden-btn");
+
+showBtn.addEventListener("click", function() {
+  hiddenBtn.style.display = "block";
+});
+</script>
+<script>
+  // Select the form element
+  const form = document.getElementById('my-form');
+  
+  // Listen for the submit event
+  form.addEventListener('submit', function(event) {
+      // Prevent the default behavior of form submission
+      event.preventDefault();
+
+      // Create a new FormData object
+      const formData = new FormData(form);
+
+      // Create a new XMLHttpRequest object
+      const xhr = new XMLHttpRequest();
+
+      // Set up the request
+      xhr.open('POST', '/upload/');
+
+      // Set up a callback function for when the request is complete
+      xhr.onload = function() {
+          if (xhr.status === 200) {
+              // Handle the response from the server
+              console.log(xhr.responseText);
+          } else {
+              // Handle errors
+              console.log('Error: ' + xhr.statusText);
+          }
+      };
+
+      // Send the request
+      xhr.send(formData);
+  });
+</script>
+
+</html>

@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+:root{
+    --primery-color--:#00365F;
+}
+
+html{
+    height: 100%;
+}
+body{
+    background: linear-gradient(180deg, #CEADCB 0%, rgba(0, 54, 95, 0.747396) 50.52%, rgba(0, 155, 158, 0.5) 100%);
+    background-repeat: no-repeat;
+    
+
+}
+.Wrapper{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5%;
+    margin-top: -3%;
+}
+
+.navigation li {
+    list-style: none;
+    margin-right: 20px;
+    font-size: 18px;
+    padding: 15px;
+    color: var(--primery-color--);
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.navigation li:last-child {
+    margin-right: 0;
+}
+.title{
+    margin-top: 3%;
+    color: white;
+    font-size: 150px;
+    font-weight: 900;
+    text-align: center;
+    text-shadow: 0 5px 10px rgba(0,0,0,.2);
+
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+.course{
+    
+    background: #FFF;
+    border-radius: 4px;
+    box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    overflow: hidden;
+    width: 800px ;
+    margin-left: -37.5%;
+    }
+    .course-info{
+    background: #00365F;
+    color: #FFF;
+    float: left;
+    padding: 30px;
+    width: 35%;
+    }
+    .course-progress{
+    float: left;
+    padding: 30px;
+    position: relative;
+    width: 65%;
+    margin-top: 5%;
+    }
+    .course h4{
+    letter-spacing: 1px;
+    margin: 10px 0px ;
+    }
+    .course h6{
+    letter-spacing: 1px;
+    opacity: 0.8;
+    text-transform: capitalize;
+    margin-top: 10px;
+    font-weight: bolder;
+    color: black;
+    
+    }
+    .course-info a{
+    color: #FFF;
+    display: inline-block;
+    font-size: 12px;
+    opacity: 0.8;
+    margin-top: 30px;
+    padding-left:  30px;
+    width: 500px;
+    text-decoration: none;
+    }
+    .progress-container{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    text-align: right;
+    width: 150px;
+    }
+    .progress{
+    background: #DDD;
+    border-radius: 3px;
+    height: 5px;
+    width: 100%;
+    }
+    .progress::after{
+    border-radius: 3px;
+    background: #ED474A;
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 5px;
+    width: 50%;
+    }
+    .progress-text{
+    font-size: 10px;
+    opacity: 0.8;
+    letter-spacing: 1px;
+    }
+    .btn{
+    background: #0d4977;
+    border: 0px;
+    outline: none;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+    color: #FFF;
+    font-size: 16px;
+    padding: 12px 25px;
+    position: absolute;
+    right: 30px;
+    bottom: -17px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    }
+  
+    @media screen and (max-width: 740px) {
+      .course-progress, .course-info{
+      width: 100%;
+      height: 200px;
+      float: none;
+      }
+      .course-info{
+      height: 140px;
+      }
+      .course-info h2{
+      margin: 8px 0px;
+      }
+      .course-info a{
+      margin-top: 10px;
+      }
+      .course-progress h2{
+      margin: 16px 0px;
+      }
+      .btn{
+      bottom: 30px;
+      left: 30px;
+      }
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 100px;
+        
+      }
+    .pagination {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        margin-top: 2.5%;
+       
+    }
+     a{
+        text-decoration: none;
+    }
+    
+    .search-bar {
+        display: flex;
+        transform: translate(-0%, -60%);
+        align-items: center;
+        justify-content: center; 
+        
+    }
+      
+    .search-input {
+        border: none;
+        padding: 8px;
+        margin-right: 4px;
+        border-radius: 4px;
+        font-size: 16px;
+        width: 200px;
+      }
+      
+    .search-btn {
+        border: none;
+        padding: 8px;
+        background-color: #00365F;
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      
+    .search-btn:hover {
+        background-color: #0069d9;
+      }
+      
+    .hidden {
+        display: none;
+    }

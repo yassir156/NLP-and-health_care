@@ -1,0 +1,115 @@
+:root{
+    --primery-color--:#00365F;
+}
+
+html{
+    height: 100%;
+}
+body{
+    background: linear-gradient(180deg, #CEADCB 0%, rgba(0, 54, 95, 0.747396) 50.52%, rgba(0, 155, 158, 0.5) 100%);
+    background-repeat: no-repeat;
+
+}
+.Wrapper{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5%;
+    margin-top: -3%;
+}
+
+.navigation li {
+    list-style: none;
+    margin-right: 20px;
+    font-size: 18px;
+    padding: 15px;
+    color: var(--primery-color--);
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.navigation li:last-child {
+    margin-right: 0;
+}
+.title{
+    margin-top: -5%;
+    color: white;
+    font-size: 150px;
+    font-weight: 900;
+    text-align: center;
+    text-shadow: 0 5px 10px rgba(0,0,0,.2);
+
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+.main{
+    display: inline;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 1%;
+}
+#icon{
+    color: white;
+    font-size: 100px;
+}
+#file{
+    display: none;
+}
+label{
+    cursor: pointer;
+    background: #D9D9D9;
+    border-radius: 100px;
+    padding: 15px 20%;
+    font-size: xx-large;
+}
+form{
+    margin-top: 4%;
+}
+.btn{
+    margin-top: 1%;
+    background-color: #D9CFDE;
+    border: 2px solid #D9CFDE;
+    color: black;
+    padding: 10px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 60px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.btn:hover {
+    background-color: transparent;
+    color: #D9CFDE;   
+  }
+.btnnext{
+    margin-top: 15%;
+    margin-left: 90%;
+    background-color: white;
+    border: 4px solid white;
+    color: black;
+    padding: 10px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 60px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+   
+}
+.btnnext:hover{
+    background-color: transparent;
+    color: white;  
+}

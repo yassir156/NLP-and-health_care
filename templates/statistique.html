@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/stat.css' %}">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav class="containers">
+            <div class="Wrapper">
+                <div class="logo">
+                    <a href="" class="logo_img"><img src="../static/images/logo (2).png" alt="logo"></a>
+                </div>
+                <ul class="navigation">
+                    <a href="">
+                        <li>Home</li>
+                    </a>
+                    <a href="">
+                        <li>About</li>
+                    </a>
+                    <a href="">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div  class="chart-container" id="chart"></div>
+        
+        <div class="chart-container" id="chart_23" ></div>
+        <div class="chart-container" id="chart_22" ></div>
+        <div class="chart-container" id="chart_2"></div>
+    </div>
+    <button onclick="test()">click</button>
+    
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="{% static 'js/stat.js' %}" type="text/javascript"></script>
+<script>
+    var amin = "{{data}}";
+    var datas = "{{data}}";
+    var categ = "{{categ}}";
+</script>
+
+</html>
